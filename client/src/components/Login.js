@@ -24,7 +24,7 @@ class Login extends React.Component {
       .post("http://localhost:5000/api/login", this.state.loginCredentials)
       .then(response => {
         console.log("post request success", response);
-        localStorage.setItem("token", response.data.data.payload);
+        localStorage.setItem("token", response.data.payload);
       })
       .catch(error => console.log(error.response));
   };
