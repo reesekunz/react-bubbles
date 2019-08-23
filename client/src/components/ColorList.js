@@ -31,14 +31,13 @@ console.log("colorToEdit", colorToEdit);
 
   
 
-const deleteColor = color=> {
-  axios
-    // .delete(`http://localhost:5000/api/colors/${color.id}`, colorToEdit)
-    .delete(`http://localhost:5000/api/colors/${color.id}`, colorToEdit)
+const deleteColor = (color) => {
+  axiosWithAuth()
+    .delete(`http://localhost:5000/api/colors/${color.id}`)
     .then(response => {
-      console.log("deleteColor delete request success from response.data", response.data)
-      setColorToEdit(response.data)
-          // props.history.push("/")
+      console.log("deleteColor delete request success", response.data)
+      updateColors(colors.filter(color => color.id !== color.id))
+      // props.history.push("/")
     })
     .catch(error => console.log(error.response));
 };
