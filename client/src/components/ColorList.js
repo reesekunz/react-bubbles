@@ -22,9 +22,9 @@ console.log("colorToEdit", colorToEdit);
     event.preventDefault();
     axiosWithAuth().put(`http://localhost:5000/api/colors/${colorToEdit.id}`, colorToEdit)
     .then(response => {
-      console.log("saveEdit put request success", response)
-      // setColorToEdit(response.data);
-      // props.history.push("/colorlist");
+      console.log("saveEdit put request success response.data", response.data)
+      setColorToEdit(response.data);
+      // props.history.push("/");
     })
     .catch(error => console.log(error.response));
 };
