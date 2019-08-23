@@ -58,11 +58,11 @@ class Login extends React.Component {
             onChange={this.handleChange}
           />
             </div>
-            <div className="input">
+          
           <button className="submit-button" type="submit">
             Submit
           </button>
-          </div>
+      
         </form>
         </div>
       </div>
