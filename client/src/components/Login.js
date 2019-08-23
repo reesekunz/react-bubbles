@@ -23,8 +23,8 @@ class Login extends React.Component {
     axios
       .post("http://localhost:5000/api/login", this.state.loginCredentials)
       .then(response => {
-        console.log("post request success, data = ", response)
-        // localStorage.setItem("token", response.data.payload);
+        console.log("post request success", response);
+        localStorage.setItem("token", response.data.data.payload);
       })
       .catch(error => console.log(error.response));
   };
@@ -48,7 +48,9 @@ class Login extends React.Component {
             value={this.state.loginCredentials.password}
             onChange={this.handleChange}
           />
-          <button className="submit-button" type="submit">Submit</button>
+          <button className="submit-button" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     );
