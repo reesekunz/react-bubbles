@@ -48,10 +48,11 @@ class AddColorForm extends React.Component {
 
     return (
       <div className="add-color-container">
-        <h2 className="add-color-header">Add Color Form</h2>
+
         <form onSubmit={this.addColor}>
 <div className="add-color-form">
           {/* Color input  */}
+          <h1>Add Color Form</h1>
           <h3>Color</h3>
           <div className="add-input">
           <input

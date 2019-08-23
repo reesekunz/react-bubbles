@@ -112,14 +112,6 @@ form {
   
 }
 
-.bubbles-header {
-  font-family: "Bookman";
-  color: white;
-  background-color: lightblue;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  
-}
 
 .log-in-form {
 
@@ -160,13 +152,7 @@ color: black;
 
 }
 
-.bubbles-image {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
 
-}
 
 .input {
 
@@ -187,9 +173,13 @@ color: black;
 .add-color-form {
   display: flex;
   flex-direction: column;
-background-color: white;
-  border: 1px solid black;
+  justify-content: flex-start;
+  align-items: center;
+// background-color: white;
+  // border: 1px solid black;
   width: 100%;
+
+  
   
 }
 
@@ -200,11 +190,12 @@ background-color: white;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   margin-left: 100%;
-  padding-bottom: 5%;
+  padding-top: 0%;
+  padding-bottom: 15%;
   margin-bottom: 20%;
 
   box-shadow: 4px 4px black;
@@ -217,3 +208,10 @@ background-color: white;
   
 }
 
+.add-color-header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 4%;
+}
