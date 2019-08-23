@@ -22,7 +22,7 @@ console.log("colorToEdit", colorToEdit);
     event.preventDefault();
     axiosWithAuth().put(`http://localhost:5000/api/colors/${colorToEdit.id}`, colorToEdit)
     .then(response => {
-      console.log("saveEdit put request success response.data", response.data)
+      console.log("saveEdit put request success from response.data", response.data)
       setColorToEdit(response.data);
       // props.history.push("/");
     })
@@ -31,10 +31,17 @@ console.log("colorToEdit", colorToEdit);
 
   
 
-  const deleteColor = color => {
-    // make a delete request to delete this color
-  };
-
+const deleteColor = color=> {
+  axios
+    // .delete(`http://localhost:5000/api/colors/${color.id}`, colorToEdit)
+    .delete(`http://localhost:5000/api/colors/${color.id}`, colorToEdit)
+    .then(response => {
+      console.log("deleteColor delete request success from response.data", response.data)
+      setColorToEdit(response.data)
+          // props.history.push("/")
+    })
+    .catch(error => console.log(error.response));
+};
   return (
     <div className="colors-wrap">
       <p>colors</p>
@@ -43,7 +50,7 @@ console.log("colorToEdit", colorToEdit);
           <li key={color.color} onClick={() => editColor(color)}>
             <span>
               <span className="delete" onClick={() => deleteColor(color)}>
-                x
+               Remove
               </span>{" "}
               {color.color}
             </span>
@@ -86,6 +93,7 @@ console.log("colorToEdit", colorToEdit);
       )}
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
+      {/* * **[POST]** to `/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`). */}
     </div>
   );
 };
