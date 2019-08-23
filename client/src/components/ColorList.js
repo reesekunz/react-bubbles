@@ -3,12 +3,16 @@ import axios from "axios";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
+import AddColorForm from "./AddColorForm";
+
+
+
 const initialColor = {
   color: "",
   code: { hex: "" }
 };
 
-const ColorList = ({ colors, updateColors }) => {
+const ColorList = ({ props, colors, updateColors }) => {
   // console.log("colors data", colors);
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
@@ -37,7 +41,7 @@ const deleteColor = (color) => {
     .then(response => {
       console.log("deleteColor delete request success", response.data)
       updateColors(colors.filter(color => color.id !== color.id))
-      // props.history.push("/")
+      props.history.push("/")
     })
     .catch(error => console.log(error.response));
 };
@@ -91,8 +95,14 @@ const deleteColor = (color) => {
         </form>
       )}
       <div className="spacer" />
+
+
       {/* stretch - build another form here to add a color */}
       {/* * **[POST]** to `/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`). */}
+<div>
+<AddColorForm />
+</div>
+
     </div>
   );
 };
