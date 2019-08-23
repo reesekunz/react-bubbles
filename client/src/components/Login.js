@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import bubblesImage from "./images/bubblesimg.jpeg";
+
 class Login extends React.Component {
   state = {
     loginCredentials: {
@@ -31,9 +33,14 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Log in</h2>
+      <div className="container">
+      <img className="bubbles-image" src={bubblesImage} alt="my bubblesss (Finding Nemo voice)" />
+      <div className="log-in-form">
+      <h2 className="bubbles-header">Welcome to our Bubbles App</h2>
+      <div className="flex-login">
         <form onSubmit={this.login}>
+          <div className="input">
+        <h4 className="log-in-header">Sign-in</h4>
           <input
             type="text"
             name="username"
@@ -41,6 +48,8 @@ class Login extends React.Component {
             value={this.state.loginCredentials.username}
             onChange={this.handleChange}
           />
+          </div>
+          <div className="input">
           <input
             type="password"
             name="password"
@@ -48,10 +57,15 @@ class Login extends React.Component {
             value={this.state.loginCredentials.password}
             onChange={this.handleChange}
           />
+            </div>
+            <div className="input">
           <button className="submit-button" type="submit">
             Submit
           </button>
+          </div>
         </form>
+        </div>
+      </div>
       </div>
     );
   }

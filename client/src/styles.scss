@@ -97,3 +97,76 @@ form {
     margin-top: 16px;
   }
 }
+
+// Extra styling
+
+.container {
+  
+    // height: 900px;
+    width: 100%;
+    position: relative;
+    border: 1px solid red;
+  
+}
+
+.bubbles-header {
+  font-family: "Bookman";
+  color: white;
+  background-color: lightblue;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  
+}
+
+.log-in-form {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  margin-left: 17%;
+
+
+z-index: 100;
+position: absolute;
+color: white;
+font-size: 3rem;
+font-weight: bold;
+left: 10%;
+top: 2%;
+
+
+
+}
+
+.log-in-header {
+  font-family: "Bookman";
+
+  font-size: 2rem;
+color: black;
+}
+
+.flex-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.bubbles-image {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+}
+
+.input {
+
+  width: 100%;
+  background-color: lightblue;
+  color: black;
+
+}
