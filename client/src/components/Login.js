@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import bubblesImage from "./images/bubblesimg.jpeg";
+import bubblesImage from "./images/Bubbles.jpeg";
 
 class Login extends React.Component {
   state = {
@@ -34,7 +34,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className="container">
-      <img className="bubbles-image" src={bubblesImage} alt="my bubblesss (Finding Nemo voice)" />
+      {/* <img className="bubbles-image" src={bubblesImage} alt="my bubblesss (Finding Nemo voice)" /> */}
       <div className="log-in-form">
       <h2 className="bubbles-header">Welcome to our Bubbles App</h2>
       <div className="flex-login">

@@ -47,11 +47,13 @@ class AddColorForm extends React.Component {
     console.log("initialColor state", this.state.initialColor.code.hex);
 
     return (
-      <div>
-        <h2>Add Color Form</h2>
+      <div className="add-color-container">
+        <h2 className="add-color-header">Add Color Form</h2>
         <form onSubmit={this.addColor}>
+<div className="add-color-form">
           {/* Color input  */}
-          <h3>Color </h3>
+          <h3>Color</h3>
+          <div className="add-input">
           <input
             type="text"
             name="color"
@@ -59,8 +61,10 @@ class AddColorForm extends React.Component {
             value={this.state.initialColor.color}
             onChange={this.handleChangeColor}
           />
+           </div>
           {/* Hex color code input  */}
           <h3>Hex Color Code</h3>
+          <div className="add-input">
           <input
             type="text"
             name="hex code"
@@ -69,9 +73,11 @@ class AddColorForm extends React.Component {
             value={this.state.initialColor.code.hex}
             onChange={this.handleChangeHexCode}
           />
-          <button className="submit-button" type="submit">
+          </div>
+          <button className="add-button" type="submit">
             Add Color
           </button>
+        </div>
         </form>
       </div>
     );

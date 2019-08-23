@@ -8,6 +8,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  // background-color: lightblue;
 }
 
 .App {
@@ -105,7 +106,9 @@ form {
     // height: 900px;
     width: 100%;
     position: relative;
-    border: 1px solid red;
+    border-left: 4px solid black;
+    background-color: lightblue;
+    
   
 }
 
@@ -153,6 +156,8 @@ color: black;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  // border: 1px solid black;
+
 }
 
 .bubbles-image {
@@ -170,3 +175,45 @@ color: black;
   color: black;
 
 }
+
+.add-input {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+
+.add-color-form {
+  display: flex;
+  flex-direction: column;
+background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  
+}
+
+.add-color-container {
+  border: 1px solid black;
+  background-color: lightblue;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 100%;
+  padding-bottom: 5%;
+  margin-bottom: 20%;
+
+  box-shadow: 4px 4px black;
+}
+
+.add-button {
+  padding-top: 3%;
+  margin-top: 3%;
+  padding-bottom: 5%;
+  
+}
+
