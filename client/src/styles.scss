@@ -8,6 +8,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  // background-color: lightblue;
 }
 
 .App {
@@ -84,6 +85,11 @@ form {
   }
 }
 
+.submit-button {
+  // padding-top: 3%;
+  margin-top: 10%;
+}
+
 .button-row {
   display: flex;
   justify-content: space-between;
@@ -95,5 +101,130 @@ form {
     color: white;
     padding: 3px 8px;
     margin-top: 16px;
+
+
   }
+}
+
+// Extra styling
+
+.container {
+  
+    // height: 900px;
+    width: 100%;
+    // position: relative;
+    border-left: 4px solid black;
+    background-color: lightblue;
+    
+  
+}
+
+
+.log-in-form {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  margin-left: 17%;
+
+
+z-index: 100;
+// position: absolute;
+color: white;
+font-size: 3rem;
+font-weight: bold;
+left: 10%;
+top: 2%;
+
+
+
+}
+
+.log-in-header {
+font-family: "Bookman";
+font-size: 2rem;
+color: black;
+}
+
+.flex-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+
+}
+
+
+
+.input {
+
+  width: 100%;
+  background-color: lightblue;
+  color: black;
+
+}
+
+.add-input {
+  padding-top: 4%;
+
+  margin-top: 4%;
+
+}
+
+
+.add-color-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+// background-color: white;
+  // border: 1px solid black;
+  width: 100%;
+
+  
+  
+}
+
+.add-color-container {
+  border: 1px solid black;
+  background-color: lightblue;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-left: 100%;
+  padding-top: 0%;
+  padding-bottom: 15%;
+  margin-bottom: 20%;
+
+  box-shadow: 4px 4px black;
+}
+
+.add-button {
+  padding-top: 3%;
+  margin-top: 3%;
+  
+  
+}
+
+.add-color-header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 4%;
+}
+
+.bubbles-header {
+  border: 2px solid black;
+  border-radius: 60%;
+  padding: 10%;
+  font-size: 2rem;
+  box-shadow: 3px 3px black;
 }
